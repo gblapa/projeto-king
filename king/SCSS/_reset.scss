@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    max-width: 100%; /* para imagens responsivas */
+}
+
+html {
+    font-size: 62.5%;
+    @include responsive(1200px) {
+            font-size: 60%;
+    }
+    @include responsive(991px) {
+            font-size: 55%;
+    }
+        
+}

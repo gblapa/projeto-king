@@ -1,0 +1,33 @@
+@mixin responsive($tamanhoDaTela) {
+    @media(max-width: $tamanhoDaTela) {
+        @content;
+    }
+}
+
+
+@mixin flex($direction, $align, $justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin style-btn($altura, $bg, $colorText) {
+    width: 24rem;
+    height: $altura;
+    background-color: $bg;
+    color: $colorText;
+    border-radius: 0.6rem;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: $altura;
+    text-align: center;
+    padding: 0rem 5rem;
+    cursor: pointer;
+    transition: all 1.3s;
+    &:hover {
+        background-color: $colorText;
+        color: $bg;
+    }
+}

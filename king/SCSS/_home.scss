@@ -1,0 +1,150 @@
+.s-hero {
+    background-color: $purple;
+    height: 58rem;
+    .container {
+        @include flex(row, flex-start ,space-between);
+    }
+    .text {
+        width: 100%;
+        max-width: 55rem;
+        h1 {
+            font-family: 'PT Sans';
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 120%;
+            color: $white;
+            margin-top: 4rem;
+        }
+        p {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: $white;
+        margin-top: 1.6rem;
+        margin-bottom: 3.2rem;
+        }
+        button {
+            @include style-btn(5.4rem, $yellow, $purple);
+            margin-bottom: 5.6rem;
+        }
+        .conheca {
+            display: flex;
+            align-items: center;
+            .icon {
+                width: 4.2rem;
+                height: 4.2rem;
+                background-color: rgba(124, 90, 186, 0.397);
+                border-radius: 0.6rem;
+                @include flex(row, center, center);
+                img {
+                    margin: 0;
+                }
+            }
+            span {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                color: $white;
+                margin-left: 1.6rem;
+            }
+        }
+    }
+    img {
+        margin-top: 7.6rem;
+    }
+}
+@include responsive(1200px) {
+    .s-hero {
+        .container {
+            .text {
+                max-width: 65rem;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@include responsive(991px) {
+    .s-hero {
+        height: 110rem;
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .text {
+                max-width: 55rem;
+                p {
+                    margin-top: 4.4rem;
+                }
+                .conheca {
+                    justify-content: center
+                }
+            }
+            .img-principal {
+                display: flex;
+                justify-content: center;
+                img {
+                    max-width: 80%;
+                    padding-right: 6rem;
+                }
+            }
+        }
+    }
+}
+@include responsive(768px) {
+    .s-hero {
+        height: auto;
+        .container {
+            .text {
+                max-width: 50rem;
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+            .img-principal {
+                img {
+                    max-width: 70%;
+                    padding-right: 5.5rem;
+                }
+            }
+        }
+    }
+}
+@include responsive(600px) {
+    .s-hero {
+        .container {
+            .text {
+                max-width: 38rem;
+            }
+            .img-principal {
+                img {
+                    max-width: 75%;
+                    padding-right: 3.5rem
+                }
+            }
+
+        }
+    }
+}
+@include responsive(480px) {
+    .s-hero {
+        .container {
+            .text {
+                p {
+                    margin-top: 3rem;
+                }
+                button {
+                    margin-bottom: 4.5rem;
+                }
+            }
+            .img-principal {
+                img {
+                    max-width: 90%;
+                    padding-right: 3.3rem;
+                }
+            }
+
+        }
+    }
+}
